@@ -37,7 +37,12 @@ public class GameWindow extends JFrame{
                 float drop_right = drop_left + drop.getWidth(null);
                 float drop_bottom = drop_top + drop.getHeight(null);
                 boolean is_drop = x >= drop_left && x <= drop_right && y >= drop_top && y <= drop_bottom;
+                if(is_drop) {
+                    drop_top = -100;
+                    drop_left = (int) (Math.random() * (game_field.getWidth() - drop.getWidth(null)));
+                    drop_v = drop_v + 20;
                 }
+            }
         });
         game_window.add(game_field);
         game_window.setVisible(true);
