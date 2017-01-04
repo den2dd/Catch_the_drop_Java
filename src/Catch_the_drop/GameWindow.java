@@ -36,6 +36,7 @@ public class GameWindow extends JFrame{
                 int y = e.getY();
                 float drop_right = drop_left + drop.getWidth(null);
                 float drop_bottom = drop_top + drop.getHeight(null);
+                boolean is_drop = x >= drop_left && x <= drop_right && y >= drop_top && y <= drop_bottom;
                 }
         });
         game_window.add(game_field);
